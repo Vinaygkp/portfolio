@@ -1,0 +1,195 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background:#081b29;
+    color:#ededed;
+}
+
+/* Part-1 */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 10%;
+    background:transparent;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+.logo{
+    font-size:25px;
+    color:#ededed;
+    text-decoration:none;
+    font-weight:600;
+}
+.navbar a{
+    font-size:20px;
+    color:#ededed;
+    text-decoration:none;
+    font-weight:500;
+    margin-left:35px;
+    transition:0.3s ease-in;
+}
+.navbar a:hover,
+.navbar a.active{
+     color:#ff7200;
+}
+
+/* Part-2 */
+
+.home{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    padding:0 10%;
+}
+.home-content{
+    max-width:600px;
+}
+.home-content h1{
+    font-size:56px;
+    font-weight:700;
+    line-height:1.6;
+}
+.home-content h3{
+    font-size:32px;
+    font-weight:700;
+    color:#00abf0;
+}
+.home-content p{
+    font-size:16px;
+    margin:20px 0 40px;
+}
+
+.home-content .btn-box{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    flex-wrap:wrap;
+    width:445px;
+    height:50px;
+}
+.btn-box a{
+    position:relative;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:150px;
+    height:100%;
+    background:#00abf0;
+    border:2px solid #00abf0;
+    border-radius:8px;
+    font-size:19px;
+    color:#081b29;
+    text-decoration:none;
+    font-weight:600px;
+    letter-spacing:1px;
+    transition:0.4s ease-in-out;
+}
+.btn-box a:nth-child(1) {
+    text-align:center;
+    background:transparent;
+    color:white;
+}
+.btn-box a:nth-child(2) {
+    background:transparent;
+    color:white;
+}
+.btn-box a:nth-child(3) {
+    background:transparent;
+    color:white;
+}
+.btn-box a:hover{
+    color:red;
+    background-color:#00abf0;
+}
+
+
+/* Part-3 */
+
+.contact{
+    position:absolute;
+    bottom:50px;
+    width:190px;
+    background:transparent;
+    display:flex;
+    justify-content:space-between;
+    gap:1rem;
+    margin-top:50px;
+}
+
+.contact a{
+    position:relative;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:40px;
+    height:40px;
+    background:transparent;
+    border:2px solid #00abf0;
+    border-radius:30%;
+    font-size:20px;
+    color:white;
+    text-decoration:none;
+}
+
+.contact a:hover{
+    background-color:#00abf0;
+    color:red;
+}
+.home-img  .img-box2{
+    position:relative;
+    width:35vw;
+    height:35vw;
+    border-radius:50%;
+    padding:5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    
+}
+.home-img  .img-box2::before,
+.home-img  .img-box2::after{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:conic-gradient(transparent);
+    
+}
+
+.home-img .img-box2 .img-it{
+    position:static;
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+    border:none;
+    background:#081b29;
+    border-radius:0;
+    display:block;
+    justify-content:flex-end;
+    margin:auto;
+    overflow:visible;
+    
+}
+
+.home-img .img-box2 .img-it img{
+    position:relative;
+    left:100px;
+    display:block;
+    height:100%;
+    width:105%;
+    object-fit:cover;
+    mix-blend-mode:lighten;
+}
