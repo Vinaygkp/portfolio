@@ -194,8 +194,9 @@ body{
     mix-blend-mode:lighten;
 }
 .foot{
-    background-color:blue;
+    background-color:rgb(28, 68, 229);
     height:100%;
     width:100%;
+    display:flex;
     color:white;
 }
