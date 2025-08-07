@@ -201,6 +201,7 @@ body{
 }
 .foot p{
     display:flex;
-    position:absolute;
+    justify-content:center;
+    text-align:center;
     font-family:Arial, Helvetica, sans-serif;
 }
