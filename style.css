@@ -191,7 +191,7 @@ body{
     height:100%;
     width:105%;
     object-fit:cover;
-    mix-blend-mode:lighten;
+    mix-blend-mode:unset;
 }
 .foot{
     background-color:rgb(28, 68, 229);
