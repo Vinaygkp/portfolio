@@ -26,19 +26,6 @@ body{
     align-items:center;
     z-index:100;
 }
-@media(max-width:768px){
-    .navbar{
-        display:none;
-        flex-direction:column;
-        background:rgba(8,27,41,0.95);
-        position:absolute;
-        top:70px;
-        right:0px;
-        width:200px;
-        padding:1rem;
-        border-radius:10px;
-    }
-}
 .logo{
     font-size:25px;
     color:#ededed;
@@ -50,14 +37,12 @@ body{
     color:#ededed;
     text-decoration:none;
     font-weight:500;
-    margin:10px 0;
     margin-left:35px;
     transition:0.3s ease-in;
 }
 .navbar a:hover,
 .navbar a.active{
-    display:flex;
-    color:#ff7200;
+     color:#ff7200;
 }
 
 /* Part-2 */
@@ -109,7 +94,7 @@ body{
     text-decoration:none;
     font-weight:600px;
     letter-spacing:1px;
-    transition: all 0.4s ease-in-out;
+    transition:0.4s ease-in-out;
 }
 .btn-box a:nth-child(1) {
     text-align:center;
@@ -127,28 +112,20 @@ body{
 .btn-box a:hover{
     color:red;
     background-color:#00abf0;
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(0,171,240,0.5);
 }
 
 
 /* Part-3 */
 
 .contact{
-    position:relative;
+    position:absolute;
     bottom:50px;
     width:190px;
     background:transparent;
     display:flex;
     justify-content:space-between;
     gap:1rem;
-    margin-top:2rem;
-}
-@media(max-width:786px){
-    .contact{
-        justify-content:center;
-        flex-wrap:wrap;
-    }
+    margin-top:50px;
 }
 
 .contact a{
@@ -188,13 +165,8 @@ body{
     position:absolute;
     width:500px;
     height:500px;
-    background:conic-gradient(#00abf0, transparent, #00abf0);
-    animation:rotate 6s linear infinite;
-}
-@keyframes rotate{
-    100%{
-        transform:rotate(360deg);
-    }
+    background:conic-gradient(transparent);
+    
 }
 
 .home-img .img-box2 .img-it{
@@ -232,10 +204,4 @@ body{
     justify-content:center;
     text-align:center;
     font-family:Arial, Helvetica, sans-serif;
-    padding:1rem;
-    cursor:pointer;
-
-}
-.foot p:hover{
-    text-decoration:underline;
 }
