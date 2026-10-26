@@ -2102,7 +2102,7 @@ function Contact() {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault(); setLoading(true);
     const text = `Name: ${form.name}%0AEmail: ${form.email}%0AMessage: ${form.message}`;
-    window.open(`https://wa.me/919140796748?text=${text}`, "_blank");
+    window.open(`https://wa.me/918601317580?text=${text}`, "_blank");
     setLoading(false); setDone(true);
     setTimeout(() => setDone(false), 4500);
     setForm({ name: "", email: "", message: "" });
@@ -2193,7 +2193,7 @@ function Contact() {
                   { icon: Github, href: "https://github.com/vinay55ti", color: "#ffffff" },
                   { icon: Linkedin, href: "https://linkedin.com/in/vinay55ti", color: "#0A66C2" },
                   { icon: Code2, href: "https://leetcode.com/u/vinay55ti/", color: "#FFA116" },
-                  { icon: MessageCircle, href: "https://wa.me/919140796748", color: "#25D366" },
+                  { icon: MessageCircle, href: "https://wa.me/918601317580", color: "#25D366" },
                 ].map(({ icon: Icon, href, color }, i) => (
                   <a
                     key={i}
