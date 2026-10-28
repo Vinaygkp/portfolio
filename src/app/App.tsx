@@ -2381,7 +2381,7 @@ export default function App() {
             <Experience />
             <Achievements />
             <TechStack />
-            <Certificates />
+            {/* <Certificates /> */}
             <Contact />
           </main>
           <Footer />
