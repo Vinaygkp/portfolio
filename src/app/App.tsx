@@ -1728,368 +1728,368 @@ function TechStack() {
   );
 }
 
-// ─── Certificates ─────────────────────────────────────────────────────────────
-interface CertItem {
-  title: string;
-  issuer: string;
-  year: string;
-  color: string;
-  abbr: string;
-  img: string;
-  link?: string;
-}
+// // ─── Certificates ─────────────────────────────────────────────────────────────
+// interface CertItem {
+//   title: string;
+//   issuer: string;
+//   year: string;
+//   color: string;
+//   abbr: string;
+//   img: string;
+//   link?: string;
+// }
 
-const CERTS: CertItem[] = [
-  {
-    title: "React Development (Learning)",
-    issuer: "Meta / React Docs Practice",
-    year: "2026",
-    color: "#61DAFB",
-    abbr: "R",
-    img: "./certificates/react-cert.jpg", // Image path daalein
-    link: "https://example.com/verify-react"
-  },
-  {
-    title: "Full Stack Development (Learning Path)",
-    issuer: "Coursera (In Progress / Practice)",
-    year: "2026",
-    color: "#8B5CF6",
-    abbr: "FS",
-    img: "./certificates/fullstack-cert.jpg",
-    link: "https://example.com/verify-fullstack"
-  },
-  {
-    title: "JavaScript Algorithms (DSA Practice)",
-    issuer: "freeCodeCamp / LeetCode",
-    year: "2026",
-    color: "#F7DF1E",
-    abbr: "DSA",
-    img: "./certificates/dsa-cert.jpg",
-    link: "https://example.com/verify-dsa"
-  },
-  {
-    title: "Node.js Backend Development (Learning)",
-    issuer: "Udemy / Personal Projects",
-    year: "2026",
-    color: "#339933",
-    abbr: "N",
-    img: "./certificates/nodejs-cert.jpg",
-  },
-  {
-    title: "MongoDB Basics (Practice)",
-    issuer: "MongoDB University Resources",
-    year: "2026",
-    color: "#47A248",
-    abbr: "DB",
-    img: "./certificates/mongodb-cert.jpg",
-  },
-  {
-    title: "Python for Problem Solving",
-    issuer: "Self Practice",
-    year: "2026",
-    color: "#3776AB",
-    abbr: "P",
-    img: "./certificates/python-cert.jpg",
-  },
-];
+// const CERTS: CertItem[] = [
+//   {
+//     title: "React Development (Learning)",
+//     issuer: "Meta / React Docs Practice",
+//     year: "2026",
+//     color: "#61DAFB",
+//     abbr: "R",
+//     img: "./certificates/react-cert.jpg", // Image path daalein
+//     link: "https://example.com/verify-react"
+//   },
+//   {
+//     title: "Full Stack Development (Learning Path)",
+//     issuer: "Coursera (In Progress / Practice)",
+//     year: "2026",
+//     color: "#8B5CF6",
+//     abbr: "FS",
+//     img: "./certificates/fullstack-cert.jpg",
+//     link: "https://example.com/verify-fullstack"
+//   },
+//   {
+//     title: "JavaScript Algorithms (DSA Practice)",
+//     issuer: "freeCodeCamp / LeetCode",
+//     year: "2026",
+//     color: "#F7DF1E",
+//     abbr: "DSA",
+//     img: "./certificates/dsa-cert.jpg",
+//     link: "https://example.com/verify-dsa"
+//   },
+//   {
+//     title: "Node.js Backend Development (Learning)",
+//     issuer: "Udemy / Personal Projects",
+//     year: "2026",
+//     color: "#339933",
+//     abbr: "N",
+//     img: "./certificates/nodejs-cert.jpg",
+//   },
+//   {
+//     title: "MongoDB Basics (Practice)",
+//     issuer: "MongoDB University Resources",
+//     year: "2026",
+//     color: "#47A248",
+//     abbr: "DB",
+//     img: "./certificates/mongodb-cert.jpg",
+//   },
+//   {
+//     title: "Python for Problem Solving",
+//     issuer: "Self Practice",
+//     year: "2026",
+//     color: "#3776AB",
+//     abbr: "P",
+//     img: "./certificates/python-cert.jpg",
+//   },
+// ];
 
-function Certificates() {
-  const [active, setActive] = useState(0);
-  const [selectedCert, setSelectedCert] = useState<CertItem | null>(null);
+// function Certificates() {
+//   const [active, setActive] = useState(0);
+//   const [selectedCert, setSelectedCert] = useState<CertItem | null>(null);
 
-  return (
-    <Section id="certificates">
-      <div
-        style={{
-          width: "100%",
-          minHeight: "auto",
-          padding: "clamp(40px, 6vw, 80px) clamp(16px, 4vw, 24px)",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ maxWidth: 1160, margin: "0 auto", width: "100%" }}>
-          <SectionHeader
-            num="07"
-            eyebrow="Certificates"
-            title="Credentials &"
-            accent="Recognition"
-          />
+//   return (
+//     <Section id="certificates">
+//       <div
+//         style={{
+//           width: "100%",
+//           minHeight: "auto",
+//           padding: "clamp(40px, 6vw, 80px) clamp(16px, 4vw, 24px)",
+//           display: "flex",
+//           flexDirection: "column",
+//           justifyContent: "center",
+//         }}
+//       >
+//         <div style={{ maxWidth: 1160, margin: "0 auto", width: "100%" }}>
+//           <SectionHeader
+//             num="07"
+//             eyebrow="Certificates"
+//             title="Credentials &"
+//             accent="Recognition"
+//           />
 
-          {/* GRID */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
-              gap: "clamp(16px, 2.5vw, 22px)",
-              marginTop: 40,
-              alignItems: "stretch",
-            }}
-          >
-            {CERTS.map((c, i) => {
-              const isActive = i === active;
+//           {/* GRID */}
+//           <div
+//             style={{
+//               display: "grid",
+//               gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+//               gap: "clamp(16px, 2.5vw, 22px)",
+//               marginTop: 40,
+//               alignItems: "stretch",
+//             }}
+//           >
+//             {CERTS.map((c, i) => {
+//               const isActive = i === active;
 
-              return (
-                <div
-                  key={i}
-                  onMouseEnter={() => setActive(i)}
-                  onClick={() => setSelectedCert(c)} // Click par modal open hoga
-                  style={{
-                    padding: "clamp(18px, 3vw, 24px)",
-                    borderRadius: 22,
-                    cursor: "pointer",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    background: isActive
-                      ? "rgba(255,255,255,0.06)"
-                      : "rgba(255,255,255,0.02)",
-                    border: `1px solid ${isActive ? c.color + "60" : "rgba(255,255,255,0.08)"
-                      }`,
-                    transform: isActive
-                      ? "translateY(-8px) scale(1.02)"
-                      : "scale(1)",
-                    boxShadow: isActive
-                      ? `0 20px 50px ${c.color}25`
-                      : "0 10px 30px rgba(0,0,0,0.25)",
-                    transition: "all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1)",
-                    backdropFilter: "blur(10px)",
-                  }}
-                >
-                  {/* Certificate Image Thumbnail Preview */}
-                  <div
-                    style={{
-                      width: "100%",
-                      height: 140,
-                      borderRadius: 14,
-                      overflow: "hidden",
-                      marginBottom: 16,
-                      position: "relative",
-                      background: "rgba(0,0,0,0.4)",
-                      border: `1px solid ${c.color}20`
-                    }}
-                  >
-                    <img
-                      src={c.img}
-                      alt={c.title}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        filter: isActive ? "brightness(1)" : "brightness(0.8)",
-                        transition: "all 0.4s ease"
-                      }}
-                      onError={(e) => {
-                        // Fallback image handling
-                        (e.target as HTMLElement).style.display = 'none';
-                      }}
-                    />
+//               return (
+//                 <div
+//                   key={i}
+//                   onMouseEnter={() => setActive(i)}
+//                   onClick={() => setSelectedCert(c)} // Click par modal open hoga
+//                   style={{
+//                     padding: "clamp(18px, 3vw, 24px)",
+//                     borderRadius: 22,
+//                     cursor: "pointer",
+//                     display: "flex",
+//                     flexDirection: "column",
+//                     justifyContent: "space-between",
+//                     background: isActive
+//                       ? "rgba(255,255,255,0.06)"
+//                       : "rgba(255,255,255,0.02)",
+//                     border: `1px solid ${isActive ? c.color + "60" : "rgba(255,255,255,0.08)"
+//                       }`,
+//                     transform: isActive
+//                       ? "translateY(-8px) scale(1.02)"
+//                       : "scale(1)",
+//                     boxShadow: isActive
+//                       ? `0 20px 50px ${c.color}25`
+//                       : "0 10px 30px rgba(0,0,0,0.25)",
+//                     transition: "all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1)",
+//                     backdropFilter: "blur(10px)",
+//                   }}
+//                 >
+//                   {/* Certificate Image Thumbnail Preview */}
+//                   <div
+//                     style={{
+//                       width: "100%",
+//                       height: 140,
+//                       borderRadius: 14,
+//                       overflow: "hidden",
+//                       marginBottom: 16,
+//                       position: "relative",
+//                       background: "rgba(0,0,0,0.4)",
+//                       border: `1px solid ${c.color}20`
+//                     }}
+//                   >
+//                     <img
+//                       src={c.img}
+//                       alt={c.title}
+//                       style={{
+//                         width: "100%",
+//                         height: "100%",
+//                         objectFit: "cover",
+//                         filter: isActive ? "brightness(1)" : "brightness(0.8)",
+//                         transition: "all 0.4s ease"
+//                       }}
+//                       onError={(e) => {
+//                         // Fallback image handling
+//                         (e.target as HTMLElement).style.display = 'none';
+//                       }}
+//                     />
 
-                    {/* Floating Abbr Badge */}
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: 10,
-                        left: 10,
-                        padding: "4px 10px",
-                        borderRadius: 8,
-                        background: `${c.color}20`,
-                        backdropFilter: "blur(8px)",
-                        border: `1px solid ${c.color}50`,
-                        color: c.color,
-                        fontWeight: 800,
-                        fontSize: 12,
-                      }}
-                    >
-                      {c.abbr}
-                    </div>
-                  </div>
+//                     {/* Floating Abbr Badge */}
+//                     <div
+//                       style={{
+//                         position: "absolute",
+//                         top: 10,
+//                         left: 10,
+//                         padding: "4px 10px",
+//                         borderRadius: 8,
+//                         background: `${c.color}20`,
+//                         backdropFilter: "blur(8px)",
+//                         border: `1px solid ${c.color}50`,
+//                         color: c.color,
+//                         fontWeight: 800,
+//                         fontSize: 12,
+//                       }}
+//                     >
+//                       {c.abbr}
+//                     </div>
+//                   </div>
 
-                  {/* Info */}
-                  <div>
-                    <h3
-                      style={{
-                        fontSize: 16,
-                        fontWeight: 700,
-                        color: "#fff",
-                        marginBottom: 8,
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {c.title}
-                    </h3>
+//                   {/* Info */}
+//                   <div>
+//                     <h3
+//                       style={{
+//                         fontSize: 16,
+//                         fontWeight: 700,
+//                         color: "#fff",
+//                         marginBottom: 8,
+//                         lineHeight: 1.4,
+//                       }}
+//                     >
+//                       {c.title}
+//                     </h3>
 
-                    <div
-                      style={{
-                        fontSize: 13,
-                        color: c.color,
-                        opacity: 0.9,
-                        marginBottom: 6,
-                        fontWeight: 500
-                      }}
-                    >
-                      {c.issuer}
-                    </div>
-                  </div>
+//                     <div
+//                       style={{
+//                         fontSize: 13,
+//                         color: c.color,
+//                         opacity: 0.9,
+//                         marginBottom: 6,
+//                         fontWeight: 500
+//                       }}
+//                     >
+//                       {c.issuer}
+//                     </div>
+//                   </div>
 
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      marginTop: 14,
-                      paddingTop: 12,
-                      borderTop: "1px solid rgba(255,255,255,0.06)"
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontSize: 11,
-                        color: "rgba(255,255,255,0.4)",
-                        fontFamily: "monospace",
-                      }}
-                    >
-                      {c.year}
-                    </span>
-                    <span
-                      style={{
-                        fontSize: 11,
-                        color: c.color,
-                        fontWeight: 600,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 4
-                      }}
-                    >
-                      View Certificate →
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
+//                   <div
+//                     style={{
+//                       display: "flex",
+//                       justifyContent: "space-between",
+//                       alignItems: "center",
+//                       marginTop: 14,
+//                       paddingTop: 12,
+//                       borderTop: "1px solid rgba(255,255,255,0.06)"
+//                     }}
+//                   >
+//                     <span
+//                       style={{
+//                         fontSize: 11,
+//                         color: "rgba(255,255,255,0.4)",
+//                         fontFamily: "monospace",
+//                       }}
+//                     >
+//                       {c.year}
+//                     </span>
+//                     <span
+//                       style={{
+//                         fontSize: 11,
+//                         color: c.color,
+//                         fontWeight: 600,
+//                         display: "flex",
+//                         alignItems: "center",
+//                         gap: 4
+//                       }}
+//                     >
+//                       View Certificate →
+//                     </span>
+//                   </div>
+//                 </div>
+//               );
+//             })}
+//           </div>
+//         </div>
+//       </div>
 
-      {/* MODAL OVERLAY FOR FULL CERTIFICATE VIEW */}
-      {selectedCert && (
-        <div
-          onClick={() => setSelectedCert(null)}
-          style={{
-            position: "fixed",
-            inset: 0,
-            zIndex: 9999,
-            background: "rgba(0, 0, 0, 0.85)",
-            backdropFilter: "blur(12px)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "clamp(12px, 3vw, 24px)",
-            animation: "fadeIn 0.3s ease"
-          }}
-        >
-          <div
-            onClick={(e) => e.stopPropagation()} // Stop overlay click closing
-            style={{
-              position: "relative",
-              maxWidth: 800,
-              width: "100%",
-              maxHeight: "90vh",
-              overflowY: "auto",
-              background: "#121212",
-              border: `1px solid ${selectedCert.color}40`,
-              borderRadius: 24,
-              padding: "clamp(16px, 3vw, 24px)",
-              boxShadow: `0 30px 100px ${selectedCert.color}30`,
-              display: "flex",
-              flexDirection: "column",
-              gap: 16
-            }}
-          >
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedCert(null)}
-              style={{
-                position: "absolute",
-                top: 16,
-                right: 16,
-                background: "rgba(255,255,255,0.1)",
-                border: "none",
-                color: "#fff",
-                width: 36,
-                height: 36,
-                borderRadius: "50%",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center"
-              }}
-            >
-              <X size={20} />
-            </button>
+//       {/* MODAL OVERLAY FOR FULL CERTIFICATE VIEW */}
+//       {selectedCert && (
+//         <div
+//           onClick={() => setSelectedCert(null)}
+//           style={{
+//             position: "fixed",
+//             inset: 0,
+//             zIndex: 9999,
+//             background: "rgba(0, 0, 0, 0.85)",
+//             backdropFilter: "blur(12px)",
+//             display: "flex",
+//             alignItems: "center",
+//             justifyContent: "center",
+//             padding: "clamp(12px, 3vw, 24px)",
+//             animation: "fadeIn 0.3s ease"
+//           }}
+//         >
+//           <div
+//             onClick={(e) => e.stopPropagation()} // Stop overlay click closing
+//             style={{
+//               position: "relative",
+//               maxWidth: 800,
+//               width: "100%",
+//               maxHeight: "90vh",
+//               overflowY: "auto",
+//               background: "#121212",
+//               border: `1px solid ${selectedCert.color}40`,
+//               borderRadius: 24,
+//               padding: "clamp(16px, 3vw, 24px)",
+//               boxShadow: `0 30px 100px ${selectedCert.color}30`,
+//               display: "flex",
+//               flexDirection: "column",
+//               gap: 16
+//             }}
+//           >
+//             {/* Close Button */}
+//             <button
+//               onClick={() => setSelectedCert(null)}
+//               style={{
+//                 position: "absolute",
+//                 top: 16,
+//                 right: 16,
+//                 background: "rgba(255,255,255,0.1)",
+//                 border: "none",
+//                 color: "#fff",
+//                 width: 36,
+//                 height: 36,
+//                 borderRadius: "50%",
+//                 cursor: "pointer",
+//                 display: "flex",
+//                 alignItems: "center",
+//                 justifyContent: "center"
+//               }}
+//             >
+//               <X size={20} />
+//             </button>
 
-            {/* Modal Image */}
-            <div
-              style={{
-                width: "100%",
-                maxHeight: "clamp(240px, 45vh, 450px)",
-                borderRadius: 16,
-                overflow: "hidden",
-                border: "1px solid rgba(255,255,255,0.1)",
-                background: "#000"
-              }}
-            >
-              <img
-                src={selectedCert.img}
-                alt={selectedCert.title}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain"
-                }}
-              />
-            </div>
+//             {/* Modal Image */}
+//             <div
+//               style={{
+//                 width: "100%",
+//                 maxHeight: "clamp(240px, 45vh, 450px)",
+//                 borderRadius: 16,
+//                 overflow: "hidden",
+//                 border: "1px solid rgba(255,255,255,0.1)",
+//                 background: "#000"
+//               }}
+//             >
+//               <img
+//                 src={selectedCert.img}
+//                 alt={selectedCert.title}
+//                 style={{
+//                   width: "100%",
+//                   height: "100%",
+//                   objectFit: "contain"
+//                 }}
+//               />
+//             </div>
 
-            {/* Modal Details */}
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-              <div>
-                <h3 style={{ fontSize: 20, fontWeight: 700, color: "#fff", marginBottom: 4 }}>
-                  {selectedCert.title}
-                </h3>
-                <p style={{ fontSize: 14, color: selectedCert.color }}>
-                  Issued by {selectedCert.issuer} ({selectedCert.year})
-                </p>
-              </div>
+//             {/* Modal Details */}
+//             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
+//               <div>
+//                 <h3 style={{ fontSize: 20, fontWeight: 700, color: "#fff", marginBottom: 4 }}>
+//                   {selectedCert.title}
+//                 </h3>
+//                 <p style={{ fontSize: 14, color: selectedCert.color }}>
+//                   Issued by {selectedCert.issuer} ({selectedCert.year})
+//                 </p>
+//               </div>
 
-              {selectedCert.link && (
-                <a
-                  href={selectedCert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                    padding: "10px 20px",
-                    borderRadius: 12,
-                    background: selectedCert.color,
-                    color: "#000",
-                    fontWeight: 700,
-                    fontSize: 13,
-                    textDecoration: "none"
-                  }}
-                >
-                  Verify Credential <ExternalLink size={16} />
-                </a>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
-    </Section>
-  );
-}
+//               {selectedCert.link && (
+//                 <a
+//                   href={selectedCert.link}
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   style={{
+//                     display: "inline-flex",
+//                     alignItems: "center",
+//                     gap: 8,
+//                     padding: "10px 20px",
+//                     borderRadius: 12,
+//                     background: selectedCert.color,
+//                     color: "#000",
+//                     fontWeight: 700,
+//                     fontSize: 13,
+//                     textDecoration: "none"
+//                   }}
+//                 >
+//                   Verify Credential <ExternalLink size={16} />
+//                 </a>
+//               )}
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </Section>
+//   );
+// }
 
 // ─── Contact ──────────────────────────────────────────────────────────────────
 
