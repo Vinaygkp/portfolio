@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { SiLeetcode } from "react-icons/si";
 import { motion } from "framer-motion";
+import VisitorCounter from "./components/VisitorCounter";
 
 // ─── Global Styles ────────────────────────────────────────────────────────────
 
@@ -2270,7 +2271,7 @@ function Footer() {
     <footer
       style={{
         position: "relative",
-        padding: "10px 5px 5px",
+        padding: "18px 16px 14px",
         background: "#050505",
         borderTop: "1px solid rgba(255,255,255,0.06)",
         overflow: "hidden",
@@ -2293,11 +2294,11 @@ function Footer() {
 
       <motion.div
         initial={{ width: 0, opacity: 0 }}
-        whileInView={{ width: 90, opacity: 1 }}
+        whileInView={{ width: 80, opacity: 1 }}
         transition={{ duration: 0.8 }}
         style={{
           height: 2,
-          margin: "0 auto 28px",
+          margin: "0 auto 14px",
           borderRadius: 20,
           background:
             "linear-gradient(90deg,transparent,#00F5FF,#8B5CF6,transparent)",
@@ -2306,12 +2307,12 @@ function Footer() {
       />
 
       <motion.h3
-        initial={{ opacity: 0, y: 15 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         style={{
           margin: 0,
-          fontSize: 17,
+          fontSize: 16,
           fontWeight: 500,
           fontFamily: "Outfit,sans-serif",
           letterSpacing: "0.5px",
@@ -2324,40 +2325,23 @@ function Footer() {
         Designed & Developed by Vinay Kumar
       </motion.h3>
 
+      <VisitorCounter />
 
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
+        transition={{ delay: 0.2 }}
         style={{
-          marginTop: 12,
+          marginTop: 6,
+          marginBottom: 0,
           color: "rgba(255,255,255,0.35)",
-          fontSize: 12,
+          fontSize: 11,
           fontFamily: "JetBrains Mono,monospace",
           letterSpacing: "1px",
         }}
       >
-        © 2026 · Built with React ⚛
+        © 2026
       </motion.p>
-
-
-      <motion.div
-        animate={{
-          opacity: [0.3, 0.8, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-        }}
-        style={{
-          marginTop: 10,
-          fontSize: 11,
-          color: "#00F5FF",
-          fontFamily: "JetBrains Mono,monospace",
-          letterSpacing: "2px",
-        }}
-      >
-      </motion.div>
     </footer>
   );
 }
